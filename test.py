@@ -19,6 +19,27 @@ class TestFunctionLab(unittest.TestCase):
         self.assertEqual(exercises.convert_temperature(0, "C"), 32.0)
         self.assertEqual(exercises.convert_temperature(32, "F"), 0.0)
 
+    def test_sum_to(self):
+        self.assertEqual(exercises.sum_to(6), 21)
+        self.assertEqual(exercises.sum_to(10), 55)
+
+    def test_largest(self):
+        self.assertEqual(exercises.largest(1, 2, 3), 3)
+        self.assertEqual(exercises.largest(10, 4, 2), 10)
+
+    def test_calculate_tip(self):
+        self.assertEqual(exercises.calculate_tip(50, 20), 10)
+
+    def test_product(self):
+        self.assertEqual(exercises.product(2, 5, 5), 50)
+        self.assertEqual(exercises.product(-1, 4), -4)
+
+    def test_basic_calculator(self):
+        self.assertEqual(exercises.basic_calculator(10, 5, 'subtract'), 5)
+        self.assertEqual(exercises.basic_calculator(10, 5, 'add'), 15)
+        self.assertEqual(exercises.basic_calculator(10, 5, 'multiply'), 50)
+        self.assertEqual(exercises.basic_calculator(10, 5, 'divide'), 2)
+
 
 if __name__ == '__main__':
     unittest.main()
